@@ -64,10 +64,13 @@
         p.name = [NSString stringWithFormat:@"%s", property_getName(property)];
         p.attributes = [NSString stringWithFormat:@"%s", property_getAttributes(property)];
         p.property = property;
-        p.setterName = NSSelectorFromString([NSString stringWithFormat:@"%s", setter]);
+        if (setter) {
+            p.setterName = NSSelectorFromString([NSString stringWithFormat:@"%s", setter]);
+        }
         p.getterName = NSSelectorFromString([NSString stringWithFormat:@"%s", getter]);
+        [arrayProperties addObject:p];
 #ifdef DEBUG
-        fprintf(stdout, "%s %s attri: %s\n", property_getName(property), setter, property_getAttributes(property));
+//        fprintf(stdout, "%s %s attri: %s\n", property_getName(property), setter, property_getAttributes(property));
 #endif
     }
     return arrayProperties;
@@ -76,6 +79,9 @@
 + (const char *)setterName:(objc_property_t)property {
     char *setter = property_copyAttributeValue(property, "S");
     if (setter == NULL) {
+        if (property_copyAttributeValue(property, "R")) {
+            return NULL;
+        }
         const char *varName = property_getName(property);
         size_t len = strlen(varName) + 4 + 1; /* four for extra char (set+:), one for trailing zero */
         setter = malloc(len);
@@ -96,5 +102,15 @@
 }
 
 #pragma mark - Class
++ (NSArray <NSString*>*)getAllProtocolList {
+    unsigned int mc = 0;
+    Protocol *__unsafe_unretained *mlist = class_copyProtocolList([self class], &mc);
+    NSMutableArray *arrayProtocolNames = [NSMutableArray new];
+    for(int i = 0; i < mc ; i++, mlist++) {
+        Protocol *p = mlist[i];
+        [arrayProtocolNames addObject:NSStringFromProtocol(p)];
+    }
+    return arrayProtocolNames;
+}
 
 @end

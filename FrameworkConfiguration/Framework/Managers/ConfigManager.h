@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+Runtime.h"
 
 @interface ConfigManager : NSObject
 
+@property (nonatomic, readonly) id customConfig;
+
 + (instancetype)sharedInstance;
+
+- (void)loadAllConfigurations:(Class)customConfigClass;
 
 @end

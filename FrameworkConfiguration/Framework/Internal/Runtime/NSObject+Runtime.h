@@ -20,4 +20,6 @@
 + (const char *)setterName:(objc_property_t)property;
 + (const char *)getterName:(objc_property_t)property;
 
++ (NSArray <NSString*>*)getAllProtocolList;
+
 @end

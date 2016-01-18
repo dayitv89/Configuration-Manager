@@ -1,31 +1,31 @@
 //
-//  AppConfig.h
+//  Game1Config.h
 //  FrameworkConfiguration
 //
-//  Created by Gaurav Sharma on 14/01/16.
+//  Created by Gaurav Sharma on 18/01/16.
 //  Copyright © 2016 iOS Dev Group. All rights reserved.
 //
 
 #import "BaseConfig.h"
 
 #import "ConfigManager.h"
-@class AppConfig;
+@class Game1Config;
 
-@interface ConfigManager (AppConfig)
+@interface ConfigManager (Game1Config)
 
-@property (nonatomic, strong) AppConfig *appConfig;
-
-@end
-
-
-@protocol AppConfigProtocol <NSObject>
-
-- (AppConfig*)customAppConfig;
+@property (nonatomic, strong) Game1Config *game1Config;
 
 @end
 
 
-@interface AppConfig : BaseConfig <BaseConfigProtocol>
+@protocol Game1ConfigProtocol <NSObject>
+
+- (Game1Config*)customGame1Config;
+
+@end
+
+
+@interface Game1Config : BaseConfig <BaseConfigProtocol>
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appVersion;

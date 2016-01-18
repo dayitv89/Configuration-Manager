@@ -1,30 +1,29 @@
 //
-//  AppConfig.m
+//  Game1Config.m
 //  FrameworkConfiguration
 //
-//  Created by Gaurav Sharma on 14/01/16.
+//  Created by Gaurav Sharma on 18/01/16.
 //  Copyright © 2016 iOS Dev Group. All rights reserved.
 //
 
-#import "AppConfig.h"
-
+#import "Game1Config.h"
 
 static void * configPropertyKey = &configPropertyKey;
 
-@implementation ConfigManager (AppConfig)
+@implementation ConfigManager (Game1Config)
 
-- (AppConfig *)appConfig {
+- (Game1Config *)game1Config {
     return objc_getAssociatedObject(self, configPropertyKey);
 }
 
-- (void)setAppConfig:(AppConfig *)appConfig {
-    if (![self appConfig]) {
-        if ([self.customConfig conformsToProtocol:@protocol(AppConfigProtocol)]) {
-            appConfig = [self.customConfig customAppConfig];
+- (void)setGame1Config:(Game1Config *)appConfig {
+    if (![self game1Config]) {
+        if ([self.customConfig conformsToProtocol:@protocol(Game1ConfigProtocol)]) {
+            appConfig = [self.customConfig customGame1Config];
         } else {
-            appConfig = [[AppConfig alloc] initWithDefaultObject:nil];
+            appConfig = [[Game1Config alloc] initWithDefaultObject:nil];
         }
-        appConfig = [appConfig createClassWithoutSetter:[AppConfig class]];
+        appConfig = [appConfig createClassWithoutSetter:[Game1Config class]];
         objc_setAssociatedObject(self, configPropertyKey, appConfig, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
@@ -32,10 +31,10 @@ static void * configPropertyKey = &configPropertyKey;
 @end
 
 
-@implementation AppConfig
+@implementation Game1Config
 
 - (void)setDefaultConfigurationFrom:(id)obj {
-    AppConfig *appConfig = (AppConfig*)obj;
+    Game1Config *appConfig = (Game1Config*)obj;
     _appName = appConfig.appName?:@"AppConfig App";
     _appVersion = appConfig.appVersion?:@"1.0.1";
     _appUserMiniumAge = appConfig.appUserMiniumAge?:15;

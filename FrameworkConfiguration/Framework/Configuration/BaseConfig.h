@@ -20,5 +20,6 @@
 @interface BaseConfig : NSObject
 
 - (instancetype)initWithDefaultObject:(id)obj;
+- (instancetype)createClassWithoutSetter:(Class)className;
 
 @end

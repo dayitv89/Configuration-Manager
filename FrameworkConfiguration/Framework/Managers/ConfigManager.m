@@ -15,7 +15,6 @@
     __strong static ConfigManager *_sharedInstance = nil;
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[super alloc] init];
-        [_sharedInstance loadAllConfigurations];
     });
     return _sharedInstance;
 }
@@ -25,8 +24,24 @@
  *  Call all the config files which is added by the category and class extention of `ConfigManager`
  *  Make their runtime class with setter do nothing, create object with the config data.
  */
-- (void)loadAllConfigurations {
+- (void)loadAllConfigurations:(Class)CustomConfigClass {
+    if (!_customConfig) {
+        if (CustomConfigClass) {
+            _customConfig = [[CustomConfigClass alloc] init];
+        } else {
+            _customConfig = [[NSObject alloc] init];
+        }
+
+        NSArray <PropertyInfoModel *>*arrayProperties = [[self class] getAllPropertyNames];
+        for (PropertyInfoModel *property in arrayProperties) {
+            if (property.setterName && [self respondsToSelector:property.setterName]) {
+                [self performSelectorOnMainThread:property.setterName withObject:nil waitUntilDone:YES];
+            }
+        }
+    }
     
 }
+
+- (void)setValue:(id)value forKey:(NSString *)key {}
 
 @end
