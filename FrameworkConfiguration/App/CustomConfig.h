@@ -6,7 +6,6 @@
 //  Copyright © 2016 iOS Dev Group. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "AppConfig.h"
 #import "Game1Config.h"
 

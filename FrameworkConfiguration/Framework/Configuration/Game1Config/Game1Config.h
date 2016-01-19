@@ -8,28 +8,18 @@
 
 #import "BaseConfig.h"
 
-#import "ConfigManager.h"
-@class Game1Config;
-
-@interface ConfigManager (Game1Config)
-
-@property (nonatomic, strong) Game1Config *game1Config;
-
-@end
-
-
-@protocol Game1ConfigProtocol <NSObject>
-
-- (Game1Config*)customGame1Config;
-
-@end
-
-
 @interface Game1Config : BaseConfig <BaseConfigProtocol>
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appVersion;
 @property (nonatomic) NSInteger appUserMiniumAge;
 @property (nonatomic) CGRect appBaseFrameSize;
+
+@end
+
+
+@protocol Game1ConfigProtocol <NSObject>
+
+- (void)customGame1Config:(Game1Config*)gameConfig;
 
 @end

@@ -8,31 +8,9 @@
 
 #import "AppConfig.h"
 
-
-static void * configPropertyKey = &configPropertyKey;
-
-@implementation ConfigManager (AppConfig)
-
-- (AppConfig *)appConfig {
-    return objc_getAssociatedObject(self, configPropertyKey);
-}
-
-- (void)setAppConfig:(AppConfig *)appConfig {
-    if (![self appConfig]) {
-        if ([self.customConfig conformsToProtocol:@protocol(AppConfigProtocol)]) {
-            appConfig = [self.customConfig customAppConfig];
-        } else {
-            appConfig = [[AppConfig alloc] initWithDefaultObject:nil];
-        }
-        appConfig = [appConfig createClassWithoutSetter:[AppConfig class]];
-        objc_setAssociatedObject(self, configPropertyKey, appConfig, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-}
-
-@end
-
-
 @implementation AppConfig
+
+CREATE_SHARED_INSTANCE
 
 - (void)setDefaultConfigurationFrom:(id)obj {
     AppConfig *appConfig = (AppConfig*)obj;
@@ -40,6 +18,12 @@ static void * configPropertyKey = &configPropertyKey;
     _appVersion = appConfig.appVersion?:@"1.0.1";
     _appUserMiniumAge = appConfig.appUserMiniumAge?:15;
     _appBaseFrameSize = isCGRect(appConfig.appBaseFrameSize)?appConfig.appBaseFrameSize:CGRectMake(2,2,316, 476);
+}
+
+- (void)callDataSourceForCustom:(id)objCustom {
+    if (objCustom && [objCustom conformsToProtocol:@protocol(AppConfigProtocol)]) {
+        [objCustom customAppConfig:self];
+    }
 }
 
 @end

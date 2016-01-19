@@ -8,22 +8,6 @@
 
 #import "BaseConfig.h"
 
-#import "ConfigManager.h"
-@class AppConfig;
-
-@interface ConfigManager (AppConfig)
-
-@property (nonatomic, strong) AppConfig *appConfig;
-
-@end
-
-
-@protocol AppConfigProtocol <NSObject>
-
-- (AppConfig*)customAppConfig;
-
-@end
-
 
 @interface AppConfig : BaseConfig <BaseConfigProtocol>
 
@@ -31,5 +15,12 @@
 @property (nonatomic, strong) NSString *appVersion;
 @property (nonatomic) NSInteger appUserMiniumAge;
 @property (nonatomic) CGRect appBaseFrameSize;
+
+@end
+
+
+@protocol AppConfigProtocol <NSObject>
+
+- (void)customAppConfig:(AppConfig*)appConfig;
 
 @end

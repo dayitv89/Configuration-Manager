@@ -8,37 +8,22 @@
 
 #import "Game1Config.h"
 
-static void * configPropertyKey = &configPropertyKey;
-
-@implementation ConfigManager (Game1Config)
-
-- (Game1Config *)game1Config {
-    return objc_getAssociatedObject(self, configPropertyKey);
-}
-
-- (void)setGame1Config:(Game1Config *)appConfig {
-    if (![self game1Config]) {
-        if ([self.customConfig conformsToProtocol:@protocol(Game1ConfigProtocol)]) {
-            appConfig = [self.customConfig customGame1Config];
-        } else {
-            appConfig = [[Game1Config alloc] initWithDefaultObject:nil];
-        }
-        appConfig = [appConfig createClassWithoutSetter:[Game1Config class]];
-        objc_setAssociatedObject(self, configPropertyKey, appConfig, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-}
-
-@end
-
-
 @implementation Game1Config
+
+CREATE_SHARED_INSTANCE
 
 - (void)setDefaultConfigurationFrom:(id)obj {
     Game1Config *appConfig = (Game1Config*)obj;
-    _appName = appConfig.appName?:@"AppConfig App";
-    _appVersion = appConfig.appVersion?:@"1.0.1";
-    _appUserMiniumAge = appConfig.appUserMiniumAge?:15;
-    _appBaseFrameSize = isCGRect(appConfig.appBaseFrameSize)?appConfig.appBaseFrameSize:CGRectMake(2,2,316, 476);
+    _appName = appConfig.appName?:@"Game Config App";
+    _appVersion = appConfig.appVersion?:@"2.0.1";
+    _appUserMiniumAge = appConfig.appUserMiniumAge?:25;
+    _appBaseFrameSize = isCGRect(appConfig.appBaseFrameSize)?appConfig.appBaseFrameSize:CGRectMake(102,102,316, 476);
+}
+
+- (void)callDataSourceForCustom:(id)objCustom {
+    if (objCustom && [objCustom conformsToProtocol:@protocol(Game1ConfigProtocol)]) {
+        [objCustom customGame1Config:self];
+    }
 }
 
 @end

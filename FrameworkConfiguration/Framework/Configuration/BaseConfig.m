@@ -10,6 +10,12 @@
 
 @implementation BaseConfig
 
++ (instancetype)sharedInstance {
+    [NSException raise:@"Call to unimplemented sharedInstance,"
+                format:@"Sample code add macro as \n\n@implementation %@ \n\nCREATE_SHARED_INSTANCE\n\n...\nyour other code\n...\n  \n@end\n\n", NSStringFromClass([self class])];
+    return nil;
+}
+
 - (instancetype)init {
     if (!self) {
         self = [self initWithDefaultObject:nil];
@@ -21,6 +27,7 @@
     if (!self) {
         self = [super init];
     }
+    
     if (![obj isKindOfClass:[BaseConfig class]]) {
         obj = nil;
     }
@@ -33,7 +40,15 @@
 
 - (void)setBaseConfigurationFrom:(id)obj {}
 
-#pragma mark - do nothing methods
+- (void)loadConfigurations {
+    Class c = NSClassFromString(@"CustomConfig");
+    id objCustom = [[c alloc] init];
+    if (objCustom && [self conformsToProtocol:@protocol(BaseConfigProtocol)]) {
+       [self performSelector:@selector(callDataSourceForCustom:) withObject:objCustom];
+    }
+}
+
+#pragma mark - do nothing methods & runtime class
 - (void)setValue:(id)value forKey:(NSString *)key {}
 
 - (void)setterDoNothing:(id)nothing {}

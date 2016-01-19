@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A4540DA71C4D20B00093C31E /* CustomConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4540DA61C4D20B00093C31E /* CustomConfig.m */; };
 		A4540DAA1C4D54A30093C31E /* Game1Config.m in Sources */ = {isa = PBXBuildFile; fileRef = A4540DA91C4D54A30093C31E /* Game1Config.m */; };
-		A4540DAD1C4D54AF0093C31E /* Game2Config.m in Sources */ = {isa = PBXBuildFile; fileRef = A4540DAC1C4D54AF0093C31E /* Game2Config.m */; };
 		A4ABB3E31C47FB71002FD56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3D81C47FB71002FD56F /* AppDelegate.m */; };
 		A4ABB3E41C47FB71002FD56F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3D91C47FB71002FD56F /* LaunchScreen.storyboard */; };
 		A4ABB3E51C47FB71002FD56F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3DB1C47FB71002FD56F /* Main.storyboard */; };
@@ -17,7 +16,6 @@
 		A4ABB3E71C47FB71002FD56F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3DF1C47FB71002FD56F /* Info.plist */; };
 		A4ABB3E81C47FB71002FD56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3E01C47FB71002FD56F /* main.m */; };
 		A4ABB3E91C47FB71002FD56F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3E21C47FB71002FD56F /* ViewController.m */; };
-		A4ABB3F41C47FCB6002FD56F /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3F31C47FCB6002FD56F /* ConfigManager.m */; };
 		A4ABB3FA1C47FE30002FD56F /* BaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3F91C47FE30002FD56F /* BaseConfig.m */; };
 		A4ABB3FD1C480026002FD56F /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3FC1C480026002FD56F /* AppConfig.m */; };
 		A4ABB4071C480B76002FD56F /* InternalRuntimeModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB4041C480B76002FD56F /* InternalRuntimeModels.m */; };
@@ -30,8 +28,6 @@
 		A4540DA61C4D20B00093C31E /* CustomConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomConfig.m; sourceTree = "<group>"; };
 		A4540DA81C4D54A30093C31E /* Game1Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game1Config.h; sourceTree = "<group>"; };
 		A4540DA91C4D54A30093C31E /* Game1Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game1Config.m; sourceTree = "<group>"; };
-		A4540DAB1C4D54AF0093C31E /* Game2Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game2Config.h; sourceTree = "<group>"; };
-		A4540DAC1C4D54AF0093C31E /* Game2Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game2Config.m; sourceTree = "<group>"; };
 		A4ABB3A51C47FA90002FD56F /* FrameworkConfiguration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkConfiguration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ABB3D71C47FB71002FD56F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4ABB3D81C47FB71002FD56F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,8 +38,6 @@
 		A4ABB3E01C47FB71002FD56F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4ABB3E11C47FB71002FD56F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A4ABB3E21C47FB71002FD56F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A4ABB3F21C47FCB6002FD56F /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
-		A4ABB3F31C47FCB6002FD56F /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
 		A4ABB3F81C47FE30002FD56F /* BaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseConfig.h; sourceTree = "<group>"; };
 		A4ABB3F91C47FE30002FD56F /* BaseConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseConfig.m; sourceTree = "<group>"; };
 		A4ABB3FB1C480026002FD56F /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
@@ -97,7 +91,6 @@
 			children = (
 				A4ABB3CC1C47FB37002FD56F /* Configuration */,
 				A4ABB3CD1C47FB37002FD56F /* Internal */,
-				A4ABB3CE1C47FB37002FD56F /* Managers */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -107,7 +100,6 @@
 			children = (
 				A4ABB3F51C47FE16002FD56F /* AppConfig */,
 				A4ABB3F61C47FE16002FD56F /* Game1Config */,
-				A4ABB3F71C47FE16002FD56F /* Game2Config */,
 				A4ABB3F81C47FE30002FD56F /* BaseConfig.h */,
 				A4ABB3F91C47FE30002FD56F /* BaseConfig.m */,
 			);
@@ -121,15 +113,6 @@
 				A4ABB4021C480B76002FD56F /* Runtime */,
 			);
 			path = Internal;
-			sourceTree = "<group>";
-		};
-		A4ABB3CE1C47FB37002FD56F /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				A4ABB3F21C47FCB6002FD56F /* ConfigManager.h */,
-				A4ABB3F31C47FCB6002FD56F /* ConfigManager.m */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		A4ABB3D61C47FB71002FD56F /* App */ = {
@@ -174,15 +157,6 @@
 				A4540DA91C4D54A30093C31E /* Game1Config.m */,
 			);
 			path = Game1Config;
-			sourceTree = "<group>";
-		};
-		A4ABB3F71C47FE16002FD56F /* Game2Config */ = {
-			isa = PBXGroup;
-			children = (
-				A4540DAB1C4D54AF0093C31E /* Game2Config.h */,
-				A4540DAC1C4D54AF0093C31E /* Game2Config.m */,
-			);
-			path = Game2Config;
 			sourceTree = "<group>";
 		};
 		A4ABB4021C480B76002FD56F /* Runtime */ = {
@@ -277,7 +251,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4540DA71C4D20B00093C31E /* CustomConfig.m in Sources */,
-				A4ABB3F41C47FCB6002FD56F /* ConfigManager.m in Sources */,
 				A4ABB40F1C48125C002FD56F /* NSObject+Basic.m in Sources */,
 				A4ABB3FD1C480026002FD56F /* AppConfig.m in Sources */,
 				A4540DAA1C4D54A30093C31E /* Game1Config.m in Sources */,
@@ -286,7 +259,6 @@
 				A4ABB4081C480B76002FD56F /* NSObject+Runtime.m in Sources */,
 				A4ABB3E91C47FB71002FD56F /* ViewController.m in Sources */,
 				A4ABB3E81C47FB71002FD56F /* main.m in Sources */,
-				A4540DAD1C4D54AF0093C31E /* Game2Config.m in Sources */,
 				A4ABB3E31C47FB71002FD56F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,39 +7,28 @@
 //
 
 #import "ViewController.h"
-#import "ConfigManager.h"
 #import "AppConfig.h"
 #import "Game1Config.h"
-#import "Game2Config.h"
-
-@interface ViewController () @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AppConfig *appConfig = [AppConfig new];
-    appConfig.appName = @"hack name";
+    [Game1Config sharedInstance].appName = @"Hack game";
+    [AppConfig sharedInstance].appName = @"Hack App";
     
-    [ConfigManager sharedInstance].appConfig = nil;
-    [ConfigManager sharedInstance].appConfig.appName = @"Hack";
-    NSLog(@"app name %@", [ConfigManager sharedInstance].appConfig.appName);
-    NSLog(@"app version %@", [ConfigManager sharedInstance].appConfig.appVersion);
-    NSLog(@"app version %ld", (long)[ConfigManager sharedInstance].appConfig.appUserMiniumAge);
-    NSLog(@"app version %@", NSStringFromCGRect([ConfigManager sharedInstance].appConfig.appBaseFrameSize));
     
-    NSLog(@"g1 app name %@", [ConfigManager sharedInstance].game1Config.appName);
-    NSLog(@"g1 app version %@", [ConfigManager sharedInstance].game1Config.appVersion);
-    NSLog(@"g1 app version %ld", (long)[ConfigManager sharedInstance].game1Config.appUserMiniumAge);
-    NSLog(@"g1 app version %@", NSStringFromCGRect([ConfigManager sharedInstance].game1Config.appBaseFrameSize));
+    NSLog(@"app name %@", [AppConfig sharedInstance].appName);
+    NSLog(@"app version %@", [AppConfig sharedInstance].appVersion);
+    NSLog(@"app version %ld", (long)[AppConfig sharedInstance].appUserMiniumAge);
+    NSLog(@"app version %@", NSStringFromCGRect([AppConfig sharedInstance].appBaseFrameSize));
     
-    NSLog(@"g2 app name %@", [ConfigManager sharedInstance].game2Config.appName);
-}
+    NSLog(@"g1 app name %@", [Game1Config sharedInstance].appName);
+    NSLog(@"g1 app version %@", [Game1Config sharedInstance].appVersion);
+    NSLog(@"g1 app version %ld", (long)[Game1Config sharedInstance].appUserMiniumAge);
+    NSLog(@"g1 app version %@", NSStringFromCGRect([Game1Config sharedInstance].appBaseFrameSize));
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
