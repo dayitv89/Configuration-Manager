@@ -15,9 +15,10 @@
     static dispatch_once_t oncePredicate = 0; \
     static id _sharedInstance = nil; \
     dispatch_once(&oncePredicate, ^{ \
-        _sharedInstance = [[self alloc] init]; \
-        [_sharedInstance loadConfigurations]; \
-        _sharedInstance = [_sharedInstance createClassWithoutSetter:[self class]]; \
+        id _sharedInstance1 = [[self alloc] init]; \
+        [_sharedInstance1 loadConfigurations]; \
+        _sharedInstance = [_sharedInstance1 createClassWithoutSetter:[self class]]; \
+        _sharedInstance1 = nil; \
     }); \
     return _sharedInstance; \
 }
@@ -37,7 +38,6 @@
 + (instancetype)sharedInstance;
 - (instancetype)init NS_UNAVAILABLE;
 - (void)loadConfigurations;
-//- (instancetype)initWithDefaultObject:(id)obj;
 - (instancetype)createClassWithoutSetter:(Class)className;
 
 @end

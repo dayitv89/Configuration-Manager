@@ -41,8 +41,7 @@
 - (void)setBaseConfigurationFrom:(id)obj {}
 
 - (void)loadConfigurations {
-    Class c = NSClassFromString(@"CustomConfig");
-    id objCustom = [[c alloc] init];
+    id objCustom = [[NSClassFromString(@"CustomConfig") alloc] init];
     if (objCustom && [self conformsToProtocol:@protocol(BaseConfigProtocol)]) {
        [self performSelector:@selector(callDataSourceForCustom:) withObject:objCustom];
     }

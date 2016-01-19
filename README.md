@@ -4,7 +4,19 @@ Rules for making new Configuration class
 - Must inherit from `BaseConfig`
 - Must implement the protocol `BaseConfigProtocol`
 - Must write `CREATE_SHARED_INSTANCE` after the @implement ClassName (Override the `+sharedInstance` method by the macro defined in `BaseConfig`)
+****
+- Must set properties value by iVAR name instead of setter in `setDefaultConfigurationFrom:` method. (Because in runtime class all setter override to do nothing method)
 
+use **_appName** instead of ~~self.appName~~
+
+```Objective-c
+- (void)setDefaultConfigurationFrom:(id)obj {
+    AppConfig *appConfig = (AppConfig*)obj;
+    ✓ _appName = appConfig.appName?:@"AppConfig App";  
+    ✗ self.appName = appConfig.appName?:@"AppConfig App";
+}
+```
+****
 ### Sample code for `AppConfig`
 `AppConfig.h`
 ```Objective-c
@@ -25,7 +37,6 @@ Rules for making new Configuration class
 
 @end
 ```
-
 
 `AppConfig.m`
 ```Objective-c
