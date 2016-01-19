@@ -4,6 +4,7 @@ Rules for making new Configuration class
 - Must inherit from `BaseConfig`
 - Must implement the protocol `BaseConfigProtocol`
 - Must write `CREATE_SHARED_INSTANCE` after the @implement ClassName (Override the `+sharedInstance` method by the macro defined in `BaseConfig`)
+
 ****
 - Must set properties value by iVAR name instead of setter in `setDefaultConfigurationFrom:` method. (Because in runtime class all setter override to do nothing method)
 
