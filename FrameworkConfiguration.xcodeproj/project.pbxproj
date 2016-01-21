@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A4540DA71C4D20B00093C31E /* CustomConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4540DA61C4D20B00093C31E /* CustomConfig.m */; };
-		A4540DAA1C4D54A30093C31E /* Game1Config.m in Sources */ = {isa = PBXBuildFile; fileRef = A4540DA91C4D54A30093C31E /* Game1Config.m */; };
 		A4ABB3E31C47FB71002FD56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3D81C47FB71002FD56F /* AppDelegate.m */; };
 		A4ABB3E41C47FB71002FD56F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3D91C47FB71002FD56F /* LaunchScreen.storyboard */; };
 		A4ABB3E51C47FB71002FD56F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3DB1C47FB71002FD56F /* Main.storyboard */; };
@@ -16,18 +15,17 @@
 		A4ABB3E71C47FB71002FD56F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ABB3DF1C47FB71002FD56F /* Info.plist */; };
 		A4ABB3E81C47FB71002FD56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3E01C47FB71002FD56F /* main.m */; };
 		A4ABB3E91C47FB71002FD56F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3E21C47FB71002FD56F /* ViewController.m */; };
-		A4ABB3FA1C47FE30002FD56F /* BaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3F91C47FE30002FD56F /* BaseConfig.m */; };
-		A4ABB3FD1C480026002FD56F /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB3FC1C480026002FD56F /* AppConfig.m */; };
-		A4ABB4071C480B76002FD56F /* InternalRuntimeModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB4041C480B76002FD56F /* InternalRuntimeModels.m */; };
-		A4ABB4081C480B76002FD56F /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB4061C480B76002FD56F /* NSObject+Runtime.m */; };
-		A4ABB40F1C48125C002FD56F /* NSObject+Basic.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABB40E1C48125C002FD56F /* NSObject+Basic.m */; };
+		A4DD83DC1C50B3CB005B98B6 /* Game1Config.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD83DB1C50B3CB005B98B6 /* Game1Config.m */; };
+		A4DD84271C5110A7005B98B6 /* NSObject+Basic.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD84211C5110A7005B98B6 /* NSObject+Basic.m */; };
+		A4DD84281C5110A7005B98B6 /* AModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD84241C5110A7005B98B6 /* AModelClass.m */; };
+		A4DD84291C5110A7005B98B6 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD84261C5110A7005B98B6 /* NSObject+Runtime.m */; };
+		A4DD842F1C5110B2005B98B6 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD842C1C5110B2005B98B6 /* AppConfig.m */; };
+		A4DD84301C5110B2005B98B6 /* BaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD842E1C5110B2005B98B6 /* BaseConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4540DA51C4D20B00093C31E /* CustomConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomConfig.h; sourceTree = "<group>"; };
 		A4540DA61C4D20B00093C31E /* CustomConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomConfig.m; sourceTree = "<group>"; };
-		A4540DA81C4D54A30093C31E /* Game1Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game1Config.h; sourceTree = "<group>"; };
-		A4540DA91C4D54A30093C31E /* Game1Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game1Config.m; sourceTree = "<group>"; };
 		A4ABB3A51C47FA90002FD56F /* FrameworkConfiguration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkConfiguration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ABB3D71C47FB71002FD56F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4ABB3D81C47FB71002FD56F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,16 +36,18 @@
 		A4ABB3E01C47FB71002FD56F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4ABB3E11C47FB71002FD56F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A4ABB3E21C47FB71002FD56F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A4ABB3F81C47FE30002FD56F /* BaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseConfig.h; sourceTree = "<group>"; };
-		A4ABB3F91C47FE30002FD56F /* BaseConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseConfig.m; sourceTree = "<group>"; };
-		A4ABB3FB1C480026002FD56F /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
-		A4ABB3FC1C480026002FD56F /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
-		A4ABB4031C480B76002FD56F /* InternalRuntimeModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalRuntimeModels.h; sourceTree = "<group>"; };
-		A4ABB4041C480B76002FD56F /* InternalRuntimeModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalRuntimeModels.m; sourceTree = "<group>"; };
-		A4ABB4051C480B76002FD56F /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
-		A4ABB4061C480B76002FD56F /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
-		A4ABB40D1C48125C002FD56F /* NSObject+Basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Basic.h"; sourceTree = "<group>"; };
-		A4ABB40E1C48125C002FD56F /* NSObject+Basic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Basic.m"; sourceTree = "<group>"; };
+		A4DD83DA1C50B3CB005B98B6 /* Game1Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game1Config.h; sourceTree = "<group>"; };
+		A4DD83DB1C50B3CB005B98B6 /* Game1Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game1Config.m; sourceTree = "<group>"; };
+		A4DD84201C5110A7005B98B6 /* NSObject+Basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Basic.h"; sourceTree = "<group>"; };
+		A4DD84211C5110A7005B98B6 /* NSObject+Basic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Basic.m"; sourceTree = "<group>"; };
+		A4DD84231C5110A7005B98B6 /* AModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AModelClass.h; sourceTree = "<group>"; };
+		A4DD84241C5110A7005B98B6 /* AModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AModelClass.m; sourceTree = "<group>"; };
+		A4DD84251C5110A7005B98B6 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
+		A4DD84261C5110A7005B98B6 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		A4DD842B1C5110B2005B98B6 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		A4DD842C1C5110B2005B98B6 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		A4DD842D1C5110B2005B98B6 /* BaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseConfig.h; sourceTree = "<group>"; };
+		A4DD842E1C5110B2005B98B6 /* BaseConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,30 +89,13 @@
 		A4ABB3CB1C47FB37002FD56F /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A4ABB3CC1C47FB37002FD56F /* Configuration */,
-				A4ABB3CD1C47FB37002FD56F /* Internal */,
+				A4DD842A1C5110B2005B98B6 /* AppConfig */,
+				A4DD842D1C5110B2005B98B6 /* BaseConfig.h */,
+				A4DD842E1C5110B2005B98B6 /* BaseConfig.m */,
+				A4DD841E1C5110A7005B98B6 /* Internal */,
+				A4DD83D91C50B3CB005B98B6 /* Game1Config */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		A4ABB3CC1C47FB37002FD56F /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				A4ABB3F51C47FE16002FD56F /* AppConfig */,
-				A4ABB3F61C47FE16002FD56F /* Game1Config */,
-				A4ABB3F81C47FE30002FD56F /* BaseConfig.h */,
-				A4ABB3F91C47FE30002FD56F /* BaseConfig.m */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		A4ABB3CD1C47FB37002FD56F /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				A4ABB40C1C48125C002FD56F /* Basic */,
-				A4ABB4021C480B76002FD56F /* Runtime */,
-			);
-			path = Internal;
 			sourceTree = "<group>";
 		};
 		A4ABB3D61C47FB71002FD56F /* App */ = {
@@ -141,42 +124,52 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A4ABB3F51C47FE16002FD56F /* AppConfig */ = {
+		A4DD83D91C50B3CB005B98B6 /* Game1Config */ = {
 			isa = PBXGroup;
 			children = (
-				A4ABB3FB1C480026002FD56F /* AppConfig.h */,
-				A4ABB3FC1C480026002FD56F /* AppConfig.m */,
+				A4DD83DA1C50B3CB005B98B6 /* Game1Config.h */,
+				A4DD83DB1C50B3CB005B98B6 /* Game1Config.m */,
 			);
-			path = AppConfig;
+			name = Game1Config;
+			path = Configuration/Game1Config;
 			sourceTree = "<group>";
 		};
-		A4ABB3F61C47FE16002FD56F /* Game1Config */ = {
+		A4DD841E1C5110A7005B98B6 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				A4540DA81C4D54A30093C31E /* Game1Config.h */,
-				A4540DA91C4D54A30093C31E /* Game1Config.m */,
+				A4DD841F1C5110A7005B98B6 /* Basic */,
+				A4DD84221C5110A7005B98B6 /* Runtime */,
 			);
-			path = Game1Config;
+			path = Internal;
 			sourceTree = "<group>";
 		};
-		A4ABB4021C480B76002FD56F /* Runtime */ = {
+		A4DD841F1C5110A7005B98B6 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				A4ABB4031C480B76002FD56F /* InternalRuntimeModels.h */,
-				A4ABB4041C480B76002FD56F /* InternalRuntimeModels.m */,
-				A4ABB4051C480B76002FD56F /* NSObject+Runtime.h */,
-				A4ABB4061C480B76002FD56F /* NSObject+Runtime.m */,
+				A4DD84201C5110A7005B98B6 /* NSObject+Basic.h */,
+				A4DD84211C5110A7005B98B6 /* NSObject+Basic.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		A4DD84221C5110A7005B98B6 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				A4DD84231C5110A7005B98B6 /* AModelClass.h */,
+				A4DD84241C5110A7005B98B6 /* AModelClass.m */,
+				A4DD84251C5110A7005B98B6 /* NSObject+Runtime.h */,
+				A4DD84261C5110A7005B98B6 /* NSObject+Runtime.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
 		};
-		A4ABB40C1C48125C002FD56F /* Basic */ = {
+		A4DD842A1C5110B2005B98B6 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
-				A4ABB40D1C48125C002FD56F /* NSObject+Basic.h */,
-				A4ABB40E1C48125C002FD56F /* NSObject+Basic.m */,
+				A4DD842B1C5110B2005B98B6 /* AppConfig.h */,
+				A4DD842C1C5110B2005B98B6 /* AppConfig.m */,
 			);
-			path = Basic;
+			path = AppConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,15 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DD84281C5110A7005B98B6 /* AModelClass.m in Sources */,
+				A4DD84271C5110A7005B98B6 /* NSObject+Basic.m in Sources */,
+				A4DD84291C5110A7005B98B6 /* NSObject+Runtime.m in Sources */,
+				A4DD842F1C5110B2005B98B6 /* AppConfig.m in Sources */,
+				A4DD83DC1C50B3CB005B98B6 /* Game1Config.m in Sources */,
 				A4540DA71C4D20B00093C31E /* CustomConfig.m in Sources */,
-				A4ABB40F1C48125C002FD56F /* NSObject+Basic.m in Sources */,
-				A4ABB3FD1C480026002FD56F /* AppConfig.m in Sources */,
-				A4540DAA1C4D54A30093C31E /* Game1Config.m in Sources */,
-				A4ABB4071C480B76002FD56F /* InternalRuntimeModels.m in Sources */,
-				A4ABB3FA1C47FE30002FD56F /* BaseConfig.m in Sources */,
-				A4ABB4081C480B76002FD56F /* NSObject+Runtime.m in Sources */,
 				A4ABB3E91C47FB71002FD56F /* ViewController.m in Sources */,
 				A4ABB3E81C47FB71002FD56F /* main.m in Sources */,
+				A4DD84301C5110B2005B98B6 /* BaseConfig.m in Sources */,
 				A4ABB3E31C47FB71002FD56F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,9 +362,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FrameworkConfiguration/App",
+					"$(PROJECT_DIR)/FrameworkConfiguration/Framework",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FrameworkConfiguration/App/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSTeam.FrameworkConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -381,9 +381,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FrameworkConfiguration/App",
+					"$(PROJECT_DIR)/FrameworkConfiguration/Framework",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FrameworkConfiguration/App/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSTeam.FrameworkConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

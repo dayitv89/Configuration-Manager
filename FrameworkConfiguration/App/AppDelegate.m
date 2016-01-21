@@ -8,4 +8,9 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate @end
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.appName = @"Custom App Name";
+    return YES;
+}
+@end

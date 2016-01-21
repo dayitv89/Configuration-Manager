@@ -26,4 +26,3 @@
 @property (nonatomic) SEL getterName;
 
 @end
-

@@ -8,12 +8,15 @@
 
 #import "BaseConfig.h"
 
+
 @interface Game1Config : BaseConfig <BaseConfigProtocol>
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appVersion;
 @property (nonatomic) NSInteger appUserMiniumAge;
 @property (nonatomic) CGRect appBaseFrameSize;
+
+- (void)loadConfigurations NS_UNAVAILABLE;
 
 @end
 

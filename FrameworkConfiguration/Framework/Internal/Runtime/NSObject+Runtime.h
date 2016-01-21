@@ -6,7 +6,7 @@
 //  Copyright © 2016 iOS Dev Group. All rights reserved.
 //
 
-#import "InternalRuntimeModels.h"
+#import "AModelClass.h"
 
 @interface NSObject (Runtime)
 

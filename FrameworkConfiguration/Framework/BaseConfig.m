@@ -38,6 +38,7 @@
     return self;
 }
 
+#pragma fixme
 - (void)setBaseConfigurationFrom:(id)obj {}
 
 - (void)loadConfigurations {

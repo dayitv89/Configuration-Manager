@@ -7,11 +7,15 @@
 //
 
 #import "CustomConfig.h"
+#import "AppDelegate.h"
 
 @implementation CustomConfig
 
 - (void)customAppConfig:(AppConfig *)appConfig {
-    appConfig.appName = @"Custom app name";
+    AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    app.appConfigHack = appConfig; // use less
+#warning TODO: hack leak available
+    appConfig.appName = app.appName; // here is the hack available
     appConfig.appUserMiniumAge = 45;
     appConfig.appBaseFrameSize = CGRectMake(0, 0, 200, 300);
 }
